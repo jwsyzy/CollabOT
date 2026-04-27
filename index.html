@@ -193,7 +193,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Multi-agent Motion Control via Collaborative Optimal Transport</h1>
+            <h1 class="title is-1 publication-title">Multi-agent Motion Planning via Collaborative Optimal Transport</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">Ying Zhang<sup>1</sup>,</span>
               <span class="author-block">An T. Le<sup>2</sup>,</span>
@@ -220,33 +220,30 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-              Multi-agent systems often need to navigate through obstacle-cluttered environments
-            while performing complex tasks.
-            To ensure collision-free trajectories among the agents and with the obstacles
-            is essential for the overall safety, along with additional requirements
-            such as smoothness, relative formation, connectivity maintenance
-            and temporal tasks.
-            Existing work mostly focuses on the design of analytical controllers that
-            encapsulate all these constraints,
-            which often impose conservative assumptions and suffer from undesired local minima
-            due to conflicting non-convex objectives.
-            This work proposes a novel motion control scheme for multi-agent systems
-            under various safety and task specifications.
-            It is formulated as a general constrained trajectory optimization problem
-            for all agents.
-            A gradient-free method called collaborative optimal transport (CLOT) is proposed
-            that optimizes a batch of system-wide smooth trajectories over highly nonlinear
-            costs via the zero-order Sinkhorn-Knopp step.
-            Furthermore, to alleviate the exponential computational complexity,
-            an original method called sequential optimal transport (SLOT) is introduced
-            and tailored for the multi-agent systems.
-            It decomposes the system-wide trajectory optimization into a sequence
-            of local adjustments via a hybrid tree search over the agent sequence and trajectory samples.
-            It is shown to improve the scalability from a few agents
-            to over 100 agents.
-            Lastly, its applicability is extensively demonstrated in both simulation and hardware,
-            over diverse complex environments and high-level tasks,
-            including formation, connectivity maintenance and signal temporal logic tasks.
+                Multi-agent systems often need to navigate in obstacle-cluttered
+                environments while performing complex tasks. Safe, collision-free
+                trajectories are essential for overall system integrity, together with
+                additional requirements such as smoothness, relative formation,
+                connectivity maintenance, and temporal tasks. Existing work mostly
+                focuses on analytical controllers or task-specific planners, which
+                often rely on conservative assumptions or suffer from undesired local
+                minima under conflicting non-convex objectives. This work proposes a
+                centralized motion-planning framework for multi-agent systems under
+                diverse safety and task specifications. The problem is formulated as a
+                constrained trajectory-optimization problem over all agents. A
+                gradient-free method called collaborative optimal transport (CLOT) is
+                proposed to optimize a batch of system-wide smooth trajectories over
+                highly nonlinear costs via the zero-order Sinkhorn--Knopp step.
+                Furthermore, to alleviate the high-dimensional burden of joint
+                optimization, a method called sequential optimal transport (SLOT) is
+                introduced for multi-agent systems. It decomposes the system-wide
+                trajectory optimization into a sequence of local adjustments through a
+                hybrid tree search over agent sequences and trajectory samples. The
+                resulting framework improves scalability from a few agents to more
+                than $100$ agents. Its applicability is demonstrated extensively in
+                both simulation and hardware experiments over diverse complex
+                environments and high-level tasks, including formation maintenance,
+                connectivity preservation, and signal temporal logic tasks.
           </p>
         </div>
       </div>
